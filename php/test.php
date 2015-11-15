@@ -1,14 +1,20 @@
+<!doctype html>
+<html>
+<body>
+
+<form action="test.php">
+  <button type="submit">Name</button>
+</form>
+
 <?php
-$coname = "BuzzX";
-function makeName() {
-  $first = array("Buzz", "Snap", "Pay", "Bit", "Square");
-  $second = array("X", "Hub", "Wire", "DB", "Ware", "Labs");
-  $firstrand = int rand (0, count($first-1));
-  $secondrand = int rand (0, count($second-1));
-  global $coname = $first[$firstrand] . $second[$secondrand];
-}
-$doc = new DomDocument;
-$doc->validateOnParse = true;
-$doc->Load('index.html');
-$doc->getElementById('co-name')->$coname;
+$first = array("Buzz", "Snap", "Pay", "Bit", "Crunch", "Square");
+$second = array("feed", "X", "book", "base", "space", "Hub");
+
+$firstrand = rand(0, 5);
+$secondrand = rand(0, 5);
+
+echo $first[$firstrand] . $second[$secondrand];
 ?>
+
+</body>
+</html>
